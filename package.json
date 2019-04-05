@@ -6,7 +6,7 @@
     "lib",
     "src"
   ],
-  "version": "2.10.3",
+  "version": "2.10.4-pickaw",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --open --config build/webpack.dev.config.js",
     "demo": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.demo.config.js",
@@ -76,8 +76,8 @@
     "vue-jest": "^2.6.0",
     "vue-loader": "^15.2.1",
     "vue-template-compiler": "^2.5.16",
-    "webpack": "^4.9.1",
-    "webpack-cli": "^2.1.4",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.4",
     "webpack-merge": "^4.1.2"
   },
