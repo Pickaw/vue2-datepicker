@@ -173,6 +173,10 @@ export default {
       type: String,
       default: 'exceptDatePickers'
     },
+    closeOn: {
+      type: String,
+      default: 'none'
+    },
     confirm: {
       type: Boolean,
       default: false
@@ -454,9 +458,10 @@ export default {
         this.updateDate()
       }
     },
-    selectTime (time, close) {
+    selectTime (time, close, type) {
       this.currentValue = time
-      this.updateDate() && close && this.closePopup()
+      console.log('selectTime', time, close, type, this.closeOn)
+      this.updateDate() && (close || (this.closeOn === type)) && this.closePopup()
     },
     selectStartTime (time) {
       this.selectStartDate(time)
