@@ -472,10 +472,16 @@ export default {
       if (this.disabled) {
         return
       }
+      let wasVisible = this.popupVisible
       this.popupVisible = true
+
+      if (!wasVisible) { this.$emit('open') }
     },
     closePopup () {
+      let wasVisible = this.popupVisible
       this.popupVisible = false
+
+      if (wasVisible) { this.$emit('close') }
     },
     getPopupSize (element) {
       const originalDisplay = element.style.display
